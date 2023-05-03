@@ -1,5 +1,5 @@
-CREATE DATABASE  IF NOT EXISTS `startcode` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
-USE `startcode`;
+CREATE DATABASE  IF NOT EXISTS `FogCarporte` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `FogCarporte`;
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -47,11 +47,11 @@ UNLOCK TABLES;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
 
-/* Create test database from startcode structure */
+/* Create test database from FogCarporte structure */
 
-CREATE DATABASE  IF NOT EXISTS `startcode_test` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
-USE `startcode_test`;
-CREATE TABLE startcode_test.user LIKE startcode.user;
+CREATE DATABASE  IF NOT EXISTS `Fogcarporte_test` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `FogCarporte_test`;
+CREATE TABLE FogCarporte_test.user LIKE FogCarporte.user;
 
 
 
