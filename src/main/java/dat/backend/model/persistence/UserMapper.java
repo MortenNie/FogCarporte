@@ -4,6 +4,8 @@ import dat.backend.model.entities.User;
 import dat.backend.model.exceptions.DatabaseException;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -67,6 +69,36 @@ class UserMapper
             throw new DatabaseException(ex, "Could not insert username into database");
         }
         return user;
+    }
+
+    static List<User> checkIfUniqueUser(String user, ConnectionPool connectionPool) {
+
+        String sql = "SELECT * FROM user WHERE username = ?";
+
+        List<User> userList = new ArrayList<>();
+
+        try (Connection connection = connectionPool.getConnection()) {
+
+            try (PreparedStatement ps = connection.prepareStatement(sql)) {
+                ps.setString(1, user);
+                ResultSet rs = ps.executeQuery();
+                while (rs.next()) {
+
+                    String username = rs.getString("username");
+                    String password = rs.getString("password");
+                    String role = rs.getString("role");
+
+                    User newUser = new User(username, password, role);
+                    userList.add(newUser);
+                }
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return userList;
+
     }
 
 
