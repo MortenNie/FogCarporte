@@ -3,7 +3,7 @@ package dat.backend.model.entities;
 public class Stolpe {
     private int stolpeId;
     private String stolpeName;
-    private int length;
+    private double length;
     private int price;
     private int quantity;
 
@@ -23,7 +23,7 @@ public class Stolpe {
         return stolpeName;
     }
 
-    public int getLength() {
+    public double getLength() {
         return length;
     }
 

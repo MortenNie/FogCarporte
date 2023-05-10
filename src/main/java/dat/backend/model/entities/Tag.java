@@ -3,7 +3,7 @@ package dat.backend.model.entities;
 public class Tag {
     private int tagId;
     private String tagName;
-    private int length;
+    private double length;
     private int price;
     private int quantity;
 
@@ -23,7 +23,7 @@ public class Tag {
         return tagName;
     }
 
-    public int getLength() {
+    public double getLength() {
         return length;
     }
 

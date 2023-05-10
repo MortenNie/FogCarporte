@@ -3,7 +3,7 @@ package dat.backend.model.entities;
 public class Rem {
     private int remId;
     private String remName;
-    private int length;
+    private double length;
     private int price;
     private int quantity;
 
@@ -23,7 +23,7 @@ public class Rem {
         return remName;
     }
 
-    public int getLength() {
+    public double getLength() {
         return length;
     }
 
