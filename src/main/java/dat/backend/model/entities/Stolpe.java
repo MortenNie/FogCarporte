@@ -7,7 +7,7 @@ public class Stolpe {
     private int price;
     private int quantity;
 
-    public Stolpe(int stolpeId, String stolpeName, int length, int price, int quantity) {
+    public Stolpe(int stolpeId, String stolpeName, double length, int price, int quantity) {
         this.stolpeId = stolpeId;
         this.stolpeName = stolpeName;
         this.length = length;

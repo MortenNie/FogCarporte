@@ -7,7 +7,7 @@ public class Rem {
     private int price;
     private int quantity;
 
-    public Rem(int remId, String remName, int length, int price, int quantity) {
+    public Rem(int remId, String remName, double length, int price, int quantity) {
         this.remId = remId;
         this.remName = remName;
         this.length = length;
