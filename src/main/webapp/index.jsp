@@ -9,12 +9,12 @@
     </jsp:attribute>
 
     <jsp:attribute name="footer">
-        Welcome to the frontpage
+        Welcome to Fog's Carports
     </jsp:attribute>
 
     <jsp:body>
 
-        <p>Startcode for 2nd semester </p>
+        <p>Placeholder placeholder placeholder </p>
 
         <c:if test="${sessionScope.user != null}">
             <p>You are logged in with the role of "${sessionScope.user.role}".</p>

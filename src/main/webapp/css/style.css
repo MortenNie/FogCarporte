@@ -1,5 +1,6 @@
-/* CSS stylesheet  for application */
+/* styles.css */
 
+/* Reset some default styles */
 table {
     border-collapse: collapse;
     border: 1px solid silver;
@@ -11,5 +12,16 @@ th, td {
     padding:15px;
 }
 
+.menu > a {
+    width: auto;
+    height: 70px;
+}
 
+body {
+    background-color: #EFEFEF !important;
+    min-height: 100vh;
+}
 
+header, footer {
+    background-color: white;
+}
