@@ -11,14 +11,14 @@ public class MathFunctions {
 
 
 
-    public static double nearest(double of, List<Double> in)
+    public static double nearest(double n, List<Double> list)
     {
         double min = Integer.MAX_VALUE;
-        double closest = of;
+        double closest = n;
 
-        for (double v : in)
+        for (double v : list)
         {
-            final double diff = Math.abs(v - of);
+            final double diff = Math.abs(v - n);
 
             if (diff < min)
             {
