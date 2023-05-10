@@ -7,7 +7,7 @@ public class Tag {
     private int price;
     private int quantity;
 
-    public Tag(int tagId, String tagName, int length, int price, int quantity) {
+    public Tag(int tagId, String tagName, double length, int price, int quantity) {
         this.tagId = tagId;
         this.tagName = tagName;
         this.length = length;
