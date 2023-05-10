@@ -15,6 +15,10 @@ public class Rem {
         this.quantity = quantity;
     }
 
+    public Rem() {
+
+    }
+
     public int getRemId() {
         return remId;
     }

@@ -14,6 +14,9 @@ public class Stolpe {
         this.price = price;
         this.quantity = quantity;
     }
+    public Stolpe() {
+
+    }
 
     public int getStolpeId() {
         return stolpeId;
