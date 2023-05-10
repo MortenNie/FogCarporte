@@ -25,10 +25,10 @@ public class ShoppingCart {
     public double getTotalPrice(){
         double sum = 0;
         for (Carport p : carports) {
-            sum = sum +  (p.getRem().getPrice() * p.getRem().getLength()/100) * p.getRem().getQuantity()+
-                    (p.getSpaer().getPrice() * p.getSpaer().getLength()/100)* p.getSpaer().getQuantity() +
-                    (p.getStolpe().getPrice() * p.getStolpe().getLength()/100) * p.getStolpe().getQuantity()+
-                    (p.getTag().getPrice() * p.getTag().getLength()/100) * p.getTag().getQuantity() ;
+            sum = sum +  (p.getRem().getPrice() * p.getRem().getLength()) * p.getRem().getQuantity()+
+                    (p.getSpaer().getPrice() * p.getSpaer().getLength())* p.getSpaer().getQuantity() +
+                    (p.getStolpe().getPrice() * p.getStolpe().getLength()) * p.getStolpe().getQuantity()+
+                    (p.getTag().getPrice() * p.getTag().getLength()) * p.getTag().getQuantity() ;
 
         }
         return sum;
