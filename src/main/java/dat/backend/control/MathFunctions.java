@@ -19,7 +19,7 @@ public class MathFunctions {
         double closest = n;
 
         for (double v : list) {
-            final double diff = Math.abs(v - n);
+             double diff = Math.abs(v - n);
 
             if (diff < min) {
                 min = diff;
