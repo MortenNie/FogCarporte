@@ -4,6 +4,7 @@ import dat.backend.model.config.ApplicationStart;
 import dat.backend.model.entities.Rem;
 import dat.backend.model.entities.Spaer;
 import dat.backend.model.entities.Stolpe;
+import dat.backend.model.entities.Tag;
 import dat.backend.model.persistence.ConnectionPool;
 import dat.backend.model.persistence.SpaerFacade;
 
@@ -44,9 +45,11 @@ public class Premadecarport extends HttpServlet {
         Spaer spaer = MathFunctions.SpaerSelection(width,length, connectionPool);
         Rem rem = MathFunctions.RemSelection(length, connectionPool);
         Stolpe stolpe = MathFunctions.stolpeSelection(length,height, shed, connectionPool);
+        Tag tag = MathFunctions.tagSelection(width, length, connectionPool);
         request.setAttribute("stolpe", stolpe);
         request.setAttribute("spaer", spaer);
         request.setAttribute("rem", rem);
+        request.setAttribute("tag", tag);
 
 
 
