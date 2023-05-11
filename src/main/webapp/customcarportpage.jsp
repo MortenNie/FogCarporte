@@ -27,8 +27,8 @@
                 <div class="form-group">
                     <label for="dropdownHeight">Height</label>
                     <select class="form-control" name="Height" id="dropdownHeight">
-                        <option value="option1">2.1</option>
-                        <option value="option2">2.2</option>
+                        <option value="2.1">2.1</option>
+                        <option value="2.2">2.2</option>
                         <option value="option3">2.3</option>
                         <option value="option4">2.4</option>
                         <option value="option5">2.5</option>
@@ -45,7 +45,7 @@
                 <div class="form-group">
                     <label for="dropdownLength">Length</label>
                     <select class="form-control" name="Length" id="dropdownLength">
-                        <option value="option1">3.2</option>
+                        <option value="3.2">3.2</option>
                         <option value="option2">3.4</option>
                         <option value="option3">3.6</option>
                         <option value="option4">3.8</option>
@@ -77,7 +77,7 @@
                 <div class="form-group">
                     <label for="dropdownWidth">Width</label>
                     <select class="form-control" name="Width" id="dropdownWidth">
-                        <option value="option1">3.0</option>
+                        <option value="3.0">3.0</option>
                         <option value="option2">3.2</option>
                         <option value="option3">3.4</option>
                         <option value="option4">3.6</option>
@@ -99,8 +99,8 @@
                 <p>Do you want your carport to have a shed?</p>
                 <div class="form-group">
                     <label for="dropdownShed">Shed(Yes or No)</label><select class="form-control" name="Shed" id="dropdownShed">
-                        <option value="option1">Yes</option>
-                        <option value="option2">No</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
                     </select>
                 </div>
                 <br>
