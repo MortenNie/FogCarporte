@@ -25,8 +25,8 @@
             <p>Choose the height of your custom carport</p>
             <form action="/submit" method="post">
                 <div class="form-group">
+                    <label for="dropdownHeight">Height</label>
                     <select class="form-control" name="Height" id="dropdownHeight">
-                        <option selected disabled value="">Height</option>
                         <option value="option1">2.1</option>
                         <option value="option2">2.2</option>
                         <option value="option3">2.3</option>
@@ -37,13 +37,15 @@
                         <option value="option3">2.8</option>
                         <option value="option3">2.9</option>
                         <option value="option3">3.0</option>
+
                     </select>
+
                 </div>
                 <br>
                 <p>Choose the length of your custom carport</p>
                 <div class="form-group">
+                    <label for="dropdownLength">Length</label>
                     <select class="form-control" name="Length" id="dropdownLength">
-                        <option selected disabled value="">Length</option>
                         <option value="option1">3.2</option>
                         <option value="option2">3.4</option>
                         <option value="option3">3.6</option>
@@ -73,8 +75,8 @@
                 <br>
                 <p>Choose the width of your custom carport</p>
                 <div class="form-group">
+                    <label for="dropdownWidth">Width</label>
                     <select class="form-control" name="Width" id="dropdownWidth">
-                        <option selected disabled value="">Width</option>
                         <option value="option1">3.0</option>
                         <option value="option2">3.2</option>
                         <option value="option3">3.4</option>
@@ -96,14 +98,15 @@
                 <br>
                 <p>Do you want your carport to have a shed?</p>
                 <div class="form-group">
-                    <select class="form-control" name="Shed" id="dropdownShed">
-                        <option selected disabled value="">Shed?</option>
+                    <label for="dropdownShed">Shed(Yes or No)</label><select class="form-control" name="Shed" id="dropdownShed">
                         <option value="option1">Yes</option>
                         <option value="option2">No</option>
                     </select>
                 </div>
                 <br>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button formaction="customcarport" type="submit" class="btn btn-primary">Submit</button>
+                <br>
+                <br>
 
             </form>
             </div>
