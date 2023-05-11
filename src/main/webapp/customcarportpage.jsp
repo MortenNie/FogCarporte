@@ -30,18 +30,17 @@
                         <option value="option1">2.1</option>
                         <option value="option2">2.2</option>
                         <option value="option3">2.3</option>
-                        <option value="option3">2.4</option>
-                        <option value="option3">2.5</option>
-                        <option value="option3">2.6</option>
-                        <option value="option3">2.7</option>
-                        <option value="option3">2.8</option>
-                        <option value="option3">2.9</option>
-                        <option value="option3">3.0</option>
-
+                        <option value="option4">2.4</option>
+                        <option value="option5">2.5</option>
+                        <option value="option6">2.6</option>
+                        <option value="option7">2.7</option>
+                        <option value="option8">2.8</option>
+                        <option value="option9">2.9</option>
+                        <option value="option10">3.0</option>
                     </select>
-
                 </div>
                 <br>
+
                 <p>Choose the length of your custom carport</p>
                 <div class="form-group">
                     <label for="dropdownLength">Length</label>
@@ -49,30 +48,31 @@
                         <option value="option1">3.2</option>
                         <option value="option2">3.4</option>
                         <option value="option3">3.6</option>
-                        <option value="option3">3.8</option>
-                        <option value="option3">4.0</option>
-                        <option value="option3">4.2</option>
-                        <option value="option3">4.4</option>
-                        <option value="option3">4.6</option>
-                        <option value="option3">4.8</option>
-                        <option value="option3">5.0</option>
-                        <option value="option3">5.2</option>
-                        <option value="option3">5.4</option>
-                        <option value="option3">5.6</option>
-                        <option value="option3">5.8</option>
-                        <option value="option3">6.0</option>
-                        <option value="option3">6.2</option>
-                        <option value="option3">6.4</option>
-                        <option value="option3">6.6</option>
-                        <option value="option3">6.8</option>
-                        <option value="option3">7.0</option>
-                        <option value="option3">7.2</option>
-                        <option value="option3">7.4</option>
-                        <option value="option3">7.6</option>
-                        <option value="option3">7.8</option>
+                        <option value="option4">3.8</option>
+                        <option value="option5">4.0</option>
+                        <option value="option6">4.2</option>
+                        <option value="option7">4.4</option>
+                        <option value="option8">4.6</option>
+                        <option value="option9">4.8</option>
+                        <option value="option10">5.0</option>
+                        <option value="option11">5.2</option>
+                        <option value="option12">5.4</option>
+                        <option value="option13">5.6</option>
+                        <option value="option14">5.8</option>
+                        <option value="option15">6.0</option>
+                        <option value="option16">6.2</option>
+                        <option value="option17">6.4</option>
+                        <option value="option18">6.6</option>
+                        <option value="option19">6.8</option>
+                        <option value="option20">7.0</option>
+                        <option value="option21">7.2</option>
+                        <option value="option22">7.4</option>
+                        <option value="option23">7.6</option>
+                        <option value="option24">7.8</option>
                     </select>
                 </div>
                 <br>
+
                 <p>Choose the width of your custom carport</p>
                 <div class="form-group">
                     <label for="dropdownWidth">Width</label>
@@ -80,19 +80,19 @@
                         <option value="option1">3.0</option>
                         <option value="option2">3.2</option>
                         <option value="option3">3.4</option>
-                        <option value="option3">3.6</option>
-                        <option value="option3">3.8</option>
-                        <option value="option3">4.0</option>
-                        <option value="option3">4.2</option>
-                        <option value="option3">4.4</option>
-                        <option value="option3">4.6</option>
-                        <option value="option3">4.8</option>
-                        <option value="option3">5.0</option>
-                        <option value="option3">5.2</option>
-                        <option value="option3">5.4</option>
-                        <option value="option3">5.6</option>
-                        <option value="option3">5.8</option>
-                        <option value="option3">6.0</option>
+                        <option value="option4">3.6</option>
+                        <option value="option5">3.8</option>
+                        <option value="option6">4.0</option>
+                        <option value="option7">4.2</option>
+                        <option value="option8">4.4</option>
+                        <option value="option9">4.6</option>
+                        <option value="option10">4.8</option>
+                        <option value="option11">5.0</option>
+                        <option value="option12">5.2</option>
+                        <option value="option13">5.4</option>
+                        <option value="option14">5.6</option>
+                        <option value="option15">5.8</option>
+                        <option value="option16">6.0</option>
                     </select>
                 </div>
                 <br>
@@ -104,6 +104,7 @@
                     </select>
                 </div>
                 <br>
+
                 <button formaction="customcarport" type="submit" class="btn btn-primary">Submit</button>
                 <br>
                 <br>
