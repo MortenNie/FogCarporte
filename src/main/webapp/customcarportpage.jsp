@@ -24,7 +24,7 @@
         <c:if test="${sessionScope.user != null}">
             <p>Choose the height of your custom carport</p>
             <form action="/submit" method="post">
-                <div class="form-group">
+                <div class="form-group dropdownHeight">
                     <label for="dropdownHeight">Height</label>
                     <select class="form-control" name="Height" id="dropdownHeight">
                         <option value="2.1">2.1</option>
@@ -42,9 +42,9 @@
                 <br>
 
                 <p>Choose the length of your custom carport</p>
-                <div class="form-group">
+                <div class="form-group dropdownLength">
                     <label for="dropdownLength">Length</label>
-                    <select class="form-control" name="Length" id="dropdownLength">
+                    <select class="form-control" name="Length" id="dropdownLength"> //onmousedown="if(this.options.length>10){this.size=10;}"  onchange='this.size=0;' onblur="this.size=0;">
                         <option value="3.2">3.2</option>
                         <option value="3.4">3.4</option>
                         <option value="3.6">3.6</option>
@@ -74,7 +74,7 @@
                 <br>
 
                 <p>Choose the width of your custom carport</p>
-                <div class="form-group">
+                <div class="form-group dropdownWidth">
                     <label for="dropdownWidth">Width</label>
                     <select class="form-control" name="Width" id="dropdownWidth">
                         <option value="3.0">3.0</option>
@@ -97,7 +97,7 @@
                 </div>
                 <br>
                 <p>Do you want your carport to have a shed?</p>
-                <div class="form-group">
+                <div class="form-group dropdownShed">
                     <label for="dropdownShed">Shed(Yes or No)</label><select class="form-control" name="Shed" id="dropdownShed">
                         <option value="Yes">Yes</option>
                         <option value="No">No</option>

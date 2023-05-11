@@ -26,4 +26,27 @@ header, footer {
     background-color: white;
 }
 
+.dropdownHeight {
+    max-width: 300px ! important;
+    max-height: 140px ! important;
+    overflow-y: auto;
 
+}
+
+.dropdownWidth {
+    max-width: 300px !important;
+    max-height: 140px !important;
+    overflow-y: auto;
+}
+
+.dropdownLength {
+    max-width: 300px !important;
+    max-height: 140px !important;
+    overflow-y: auto;
+}
+
+.dropdownShed {
+    max-width: 300px !important;
+    max-height: 140px !important;
+    overflow-y: auto;
+}
