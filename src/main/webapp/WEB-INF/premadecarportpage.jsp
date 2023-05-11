@@ -89,6 +89,30 @@
 
             </table>
 
+            <table class="table table-striped mt-4">
+
+
+                <tr>
+                    <th>Tag id:</th>
+                    <th>Tag name:</th>
+                    <th>Tag price pr. meter:</th>
+                    <th>Tag length [m]:</th>
+                    <th>Tag quantity: </th>
+
+
+                </tr>
+
+                <tr>
+                    <td> ${requestScope.tag.tagId}</td>
+                    <td> ${requestScope.tag.tagName} </td>
+                    <td> ${requestScope.tag.price} </td>>
+                    <td> ${requestScope.tag.length} </td>>
+                    <td> ${requestScope.tag.quantity} </td>>
+
+                </tr>
+
+            </table>
+
 
 
         </c:if>

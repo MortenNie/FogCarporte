@@ -15,6 +15,10 @@ public class Tag {
         this.quantity = quantity;
     }
 
+    public Tag() {
+
+    }
+
     public int getTagId() {
         return tagId;
     }

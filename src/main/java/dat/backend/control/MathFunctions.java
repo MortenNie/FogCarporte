@@ -3,10 +3,8 @@ package dat.backend.control;
 import dat.backend.model.entities.Rem;
 import dat.backend.model.entities.Spaer;
 import dat.backend.model.entities.Stolpe;
-import dat.backend.model.persistence.ConnectionPool;
-import dat.backend.model.persistence.RemFacade;
-import dat.backend.model.persistence.SpaerFacade;
-import dat.backend.model.persistence.StolpeFacade;
+import dat.backend.model.entities.Tag;
+import dat.backend.model.persistence.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -117,6 +115,36 @@ public class MathFunctions {
         }
         return finalStolpe;
     }
+
+    public static int amountOfMaterialTag(double carportLength) {
+        double tagDistance = 1.0; //distancen mellem tagplade skal være 1m ifølge carport planen.
+        return (int) Math.rint(carportLength/tagDistance); //mængden af tagplader er da carport længden divideret med tagdistancen.
+    }
+
+    public static Tag tagSelection(double width, double length, ConnectionPool connectionPool) {
+        List<Tag> listOfTag = TagFacade.getAllTag(connectionPool); // find all tagplader.
+        List<Double> listOfTagLengths = new ArrayList<>();
+        Tag finalTag = new Tag();
+        for (Tag t : listOfTag) {
+            listOfTagLengths.add(t.getLength());
+
+        }
+        double tagLength = MathFunctions.nearest(width, listOfTagLengths); //find nærmeste længde tagplade passende til bredden.
+
+        for (Tag t : listOfTag) {
+            if (tagLength == t.getLength()) {
+                finalTag = t;
+
+            }
+        }
+
+        int quantity = MathFunctions.amountOfMaterialTag(length); // find mængde tagplader.
+        finalTag.setQuantity(quantity);
+        return finalTag;
+    }
+
+
+
 }
 
 
