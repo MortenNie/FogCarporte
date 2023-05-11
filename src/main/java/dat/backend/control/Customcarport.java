@@ -1,6 +1,9 @@
 package dat.backend.control;
 
 import dat.backend.model.config.ApplicationStart;
+import dat.backend.model.entities.Rem;
+import dat.backend.model.entities.Spaer;
+import dat.backend.model.entities.Stolpe;
 import dat.backend.model.persistence.ConnectionPool;
 
 import javax.servlet.*;
@@ -25,10 +28,6 @@ public class Customcarport extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-
-
-
-
-        request.getRequestDispatcher("customcarportpage.jsp").forward(request, response);
-    }
+        request.getRequestDispatcher("customcarportpage.jsp").forward(request,response);
+       }
 }
