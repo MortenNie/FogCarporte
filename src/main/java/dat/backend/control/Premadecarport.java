@@ -2,6 +2,7 @@ package dat.backend.control;
 
 import dat.backend.model.config.ApplicationStart;
 import dat.backend.model.entities.*;
+import dat.backend.model.persistence.CarportFacade;
 import dat.backend.model.persistence.ConnectionPool;
 import dat.backend.model.persistence.SpaerFacade;
 
@@ -48,8 +49,8 @@ public class Premadecarport extends HttpServlet {
         request.setAttribute("spaer", spaer);
         request.setAttribute("rem", rem);
         request.setAttribute("tag", tag);
-
-        Carport carport = new Carport(width,length, height, shed, spaer, rem, stolpe, tag);
+        int carportId = CarportFacade.returnCarportId(width,length, height,shed, connectionPool);
+        Carport carport = new Carport(carportId,width,length, height, shed, spaer, rem, stolpe, tag);
         ShoppingCart sc = new ShoppingCart();
         sc.addCarport(carport);
         request.setAttribute("sc", sc);

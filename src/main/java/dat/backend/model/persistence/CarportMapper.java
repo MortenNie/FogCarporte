@@ -82,5 +82,23 @@ class CarportMapper {
         return ts;
     }
 
+    public static void addOrderIdToCarport(int orderId, int carportId, ConnectionPool connectionPool) throws DatabaseException {
+        Logger.getLogger("web").log(Level.INFO, "");
+
+        String sql = "Update carport SET order_id = ? WHERE carport_id = ?";
+        try (Connection connection = connectionPool.getConnection()) {
+            try (PreparedStatement ps = connection.prepareStatement(sql)) {
+                ps.setInt(1, orderId);
+                ps.setInt(2, carportId);
+                ps.executeUpdate();
+
+
+            }
+        } catch (SQLException ex) {
+            throw new DatabaseException(ex, "Could not insert order into database");
+        }
+
+    }
+
 }
 

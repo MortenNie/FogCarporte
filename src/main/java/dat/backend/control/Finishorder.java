@@ -49,7 +49,7 @@ public class Finishorder extends HttpServlet {
         try {
           orderId = OrderFacade.addOrder(clientName,clientAdress,user.getUsername(),"pending", price, connectionPool);
           for (Carport s: listofCarports) {
-          carportId = CarportFacade.CreateCarportAndReturnCarportId(s.getWidth(),s.getLength(),s.getHeight(),s.isShed(),orderId,connectionPool);
+              listOfCarportIds.add(s.getCarportId());
               ItemListMapper.AddToItemListSpaer(s.getSpaer().getSpaerId(),s.getSpaer().getQuantity(),carportId, connectionPool);
               ItemListMapper.AddToItemListRem(s.getRem().getRemId(),s.getRem().getQuantity(),carportId, connectionPool);
               ItemListMapper.AddToItemListStolpe(s.getStolpe().getStolpeId(),s.getStolpe().getQuantity(),carportId, connectionPool);
@@ -57,6 +57,15 @@ public class Finishorder extends HttpServlet {
           }
         } catch (DatabaseException e) {
             e.printStackTrace();
+        }
+
+        for (Integer t: listOfCarportIds) {
+            try {
+                CarportFacade.addOrderIdToCarport(orderId, t, connectionPool);
+            } catch (DatabaseException e) {
+                e.printStackTrace();
+            }
+
         }
 
         shoppingCart.getCarports().clear();
