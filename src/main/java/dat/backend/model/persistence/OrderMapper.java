@@ -3,10 +3,9 @@ package dat.backend.model.persistence;
 import dat.backend.model.entities.Order;
 import dat.backend.model.exceptions.DatabaseException;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -41,5 +40,74 @@ public class OrderMapper {
             throw new DatabaseException(ex, "Could not insert order into database");
         }
 
+    }
+
+    public static List<Order> selectAllOrders(ConnectionPool connectionPool) {
+        Logger.getLogger("web").log(Level.INFO, "");
+        List<Order> orderList = new ArrayList<>();
+        String sql = "SELECT * FROM fogcarporte.order";
+
+        try (Connection connection = connectionPool.getConnection()){
+
+            try(PreparedStatement ps = connection.prepareStatement(sql)){
+
+                ResultSet rs = ps.executeQuery();
+
+                while (rs.next()) {
+
+                    int OrderId = rs.getInt("order_id");
+                    Timestamp date = rs.getTimestamp("date");
+                    String name = rs.getString("name");
+                    String adress = rs.getString("adress");
+                    String status = rs.getString("status");
+                    double price = rs.getDouble("price");
+
+                    Order newOrder = new Order(OrderId, name, adress, date,status,price);
+                    orderList.add(newOrder);
+
+
+                }
+
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return orderList;
+    }
+
+    public static List<Order> selectAllOrdersFromUser(String user,ConnectionPool connectionPool) {
+        Logger.getLogger("web").log(Level.INFO, "");
+        List<Order> orderList = new ArrayList<>();
+        String sql = "SELECT * FROM fogcarporte.order WHERE username = ?";
+
+        try (Connection connection = connectionPool.getConnection()){
+
+            try(PreparedStatement ps = connection.prepareStatement(sql)){
+                ps.setString(1, user);
+                ResultSet rs = ps.executeQuery();
+                while (rs.next()) {
+                    int OrderId = rs.getInt("order_id");
+                    Timestamp date = rs.getTimestamp("date");
+                    String name = rs.getString("name");
+                    String adress =rs.getString("adress");
+                    String status = rs.getString("status");
+                    double price = rs.getDouble("price");
+
+
+                    Order newOrder = new Order(OrderId,name,adress, date,status,price);
+                    orderList.add(newOrder);
+
+
+                }
+
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return orderList;
     }
 }
