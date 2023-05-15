@@ -67,7 +67,7 @@
                 2800 Lyngby
             </div>
             <div class="col text-center">
-                <jsp:invoke fragment="footer"/><br/>
+                All rights reserved<br/>
                 <p>&copy; Fog Inc. </p>
             </div>
             <div class="col text-center">

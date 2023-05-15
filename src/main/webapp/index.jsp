@@ -26,6 +26,14 @@
 
         <c:if test="${sessionScope.user != null}">
             <p>You are logged in with the role of "${sessionScope.user.role}".</p>
+
+            <form method="post">
+
+                <button formaction="ordercupcake" type="submit" class="align-baseline shadow-sm btn btn-outline-success">Order cupcake</button>
+                <button formaction="orderhistory" type="submit" class="align-baseline shadow-sm btn btn-outline-success"> See all orders</button>
+
+
+            </form>
         </c:if>
 
         <c:if test="${sessionScope.user == null}">
