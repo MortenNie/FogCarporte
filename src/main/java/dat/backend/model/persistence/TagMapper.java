@@ -26,7 +26,7 @@ public class TagMapper {
                     String tagName = rs.getString("tag_name");
                     double length = rs.getDouble("length");
                     int price = rs.getInt("price");
-                    int quantity = rs.getInt("quantity");
+                    int quantity = 1;
 
 
                     Tag newTag = new Tag(tagId, tagName, length, price, quantity);

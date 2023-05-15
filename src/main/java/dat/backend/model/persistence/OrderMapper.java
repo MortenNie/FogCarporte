@@ -12,10 +12,10 @@ import java.util.logging.Logger;
 
 public class OrderMapper {
 
-    public static int addOrder( String name, String adress,String username, ConnectionPool connectionPool) throws DatabaseException {
+    public static int addOrder( String name, String adress,String username,String status, double price, ConnectionPool connectionPool) throws DatabaseException {
         Logger.getLogger("web").log(Level.INFO, "");
         Order order;
-        String sql = "insert into fogcarporte.order (name, adress, username) values (?,?,?)";
+        String sql = "insert into fogcarporte.order (name, adress, username, status, price) values (?,?,?,?,?)";
         try (Connection connection = connectionPool.getConnection())
         {
             try (PreparedStatement ps = connection.prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS))
@@ -23,7 +23,8 @@ public class OrderMapper {
                 ps.setString(1, name);
                 ps.setString(2, adress);
                 ps.setString(3, username);
-
+                ps.setString(4, status);
+                ps.setDouble(5, price);
                 ps.executeUpdate();
 
 

@@ -8,12 +8,16 @@ public class Order {
     private String name;
     private String adress;
     private Timestamp date;
+    private String status;
+    private double price;
 
-    public Order(int orderId, String name, String adress, Timestamp date) {
+    public Order(int orderId, String name, String adress, Timestamp date, String status, double price) {
         this.orderId = orderId;
         this.name = name;
         this.adress = adress;
         this.date = date;
+        this.status = status;
+        this.price = price;
     }
 
     public int getOrderId() {
@@ -30,5 +34,13 @@ public class Order {
 
     public Timestamp getDate() {
         return date;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public double getPrice() {
+        return price;
     }
 }

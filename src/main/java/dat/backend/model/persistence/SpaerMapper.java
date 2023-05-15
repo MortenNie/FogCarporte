@@ -27,7 +27,7 @@ public class SpaerMapper {
                     String spaerName = rs.getString("spaer_name");
                     double length = rs.getDouble("length");
                     int price = rs.getInt("price");
-                    int quantity = rs.getInt("quantity");
+                    int quantity = 1;
 
 
                     Spaer newSpaer = new Spaer(spaerId, spaerName, length, price, quantity);

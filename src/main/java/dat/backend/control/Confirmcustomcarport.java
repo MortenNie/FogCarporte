@@ -13,6 +13,9 @@ import java.io.IOException;
 public class Confirmcustomcarport extends HttpServlet {
     private ConnectionPool connectionPool;
 
+
+
+
     @Override
     public void init() throws ServletException {
         this.connectionPool = ApplicationStart.getConnectionPool();
@@ -44,7 +47,12 @@ public class Confirmcustomcarport extends HttpServlet {
         request.setAttribute("spaer", spaer);
         request.setAttribute("rem", rem);
         request.setAttribute("tag", tag);
-
+        Carport carport = new Carport(width,length, height, shed, spaer, rem, stolpe, tag);
+        ShoppingCart sc = new ShoppingCart();
+        sc.addCarport(carport);
+        request.setAttribute("sc", sc);
+        HttpSession session = request.getSession();
+        session.setAttribute("carport", carport);
 
 
         request.getRequestDispatcher("WEB-INF/customcarportpagetwo.jsp").forward(request, response);

@@ -4,6 +4,7 @@ import dat.backend.model.entities.Rem;
 import dat.backend.model.entities.Spaer;
 import dat.backend.model.entities.Stolpe;
 import dat.backend.model.entities.Tag;
+import dat.backend.model.exceptions.DatabaseException;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -12,13 +13,13 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class PremadeCarportMapper {
+class CarportMapper {
 
-    public static int CreateCarportAndReturnCarportId(double width, double length, double height, boolean shed, Spaer spaer, Rem rem, Stolpe stolpe, Tag tag, ConnectionPool connectionPool) {
+     static int CreateCarportAndReturnCarportId(double width, double length, double height, boolean shed, int orderId, ConnectionPool connectionPool) {
         Logger.getLogger("web").log(Level.INFO, "");
         int ts = -1;
 
-        String sql = "insert into carport (width, length, height, shed, spaer, rem, stolpe, tag) values (?,?,?,?,?,?,?,?)";
+        String sql = "insert into carport (width, length, height, shed, order_id) values (?,?,?,?,?)";
 
         try (Connection connection = connectionPool.getConnection()) {
             try (PreparedStatement ps = connection.prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS)) {
@@ -28,10 +29,8 @@ public class PremadeCarportMapper {
                 ps.setDouble(2, length);
                 ps.setDouble(3, height);
                 ps.setBoolean(4, shed);
-                ps.setInt(5, spaer.getSpaerId());
-                ps.setInt(6, rem.getRemId());
-                ps.setInt(7, stolpe.getStolpeId());
-                ps.setInt(8, tag.getTagId());
+                ps.setInt(5,orderId);
+
 
 
                 ps.executeUpdate();

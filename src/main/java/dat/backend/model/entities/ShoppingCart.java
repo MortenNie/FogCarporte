@@ -14,7 +14,7 @@ public class ShoppingCart {
         carports.add(carport);
     }
 
-    public ArrayList<Carport> getProducts() {
+    public ArrayList<Carport> getCarports() {
         return carports;
     }
 

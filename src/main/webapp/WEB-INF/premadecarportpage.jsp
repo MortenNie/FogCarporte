@@ -18,6 +18,7 @@
 
         <c:if test="${sessionScope.user != null}">
             <p> list of materials:
+            <form method="post" >
             <table class="table table-striped mt-4">
 
 
@@ -113,7 +114,26 @@
 
             </table>
 
+            <table class="table table-striped mt-4">
 
+
+
+                <tr>
+                    <td>Materiale pris ${requestScope.sc.totalPrice}</td>
+                    <td>Total pris: ${requestScope.sc.totalPrice + 0.4 * requestScope.sc.totalPrice} kr. inklusive dækningsgrad på 40% </td>
+
+
+                </tr>
+
+
+            </table>
+
+            <button type="submit" formaction="addtoshoppingcart" value="${requestScope.sc.totalPrice}" name="addtoshoppingcart">add to shoppingcart </button>
+
+        </form>
+            <form method="post">
+                <button type="submit" formaction="seeshoppingcart" value="${requestScope.sc.totalPrice}" name="seeshoppingcart">see shopping cart </button>
+            </form>
 
         </c:if>
 

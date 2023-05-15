@@ -26,7 +26,7 @@ public class StolpeMapper {
                     String stolpeName = rs.getString("stolpe_name");
                     double length = rs.getDouble("length");
                     int price = rs.getInt("price");
-                    int quantity = rs.getInt("quantity");
+                    int quantity = 1;
 
 
                     Stolpe newStolpe = new Stolpe (stolpeId, stolpeName, length, price, quantity);

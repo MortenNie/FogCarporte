@@ -142,7 +142,11 @@ public class MathFunctions {
         finalTag.setQuantity(quantity);
         return finalTag;
     }
+   public static double priceWithDaekningsGrad(double n, double daekningsgrad) {
+        return n + n * daekningsgrad;
 
+
+   }
 
 
 }

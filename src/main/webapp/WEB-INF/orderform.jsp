@@ -20,13 +20,13 @@
     </jsp:attribute>
 
     <jsp:body>
-        <form action="orderform" method="post">
+        <form  method="post">
             Name: <input type="text" class="form-control" placeholder="Name" aria-label="Name" name="Name"/><br/>
             <br/>
             Adress: <input type="text" class="form-control" placeholder="Adress" aria-label="Adress" name="Adress"><br/>
             <br/>
 
-            <button type="submit" class="btn btn-primary btn-lg">Get offer </button>
+            <button type="submit"  formaction="finishorder" class="btn btn-primary btn-lg">Get offer </button>
         </form>
 
     </jsp:body>

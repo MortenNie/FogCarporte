@@ -1,10 +1,7 @@
 package dat.backend.control;
 
 import dat.backend.model.config.ApplicationStart;
-import dat.backend.model.entities.Rem;
-import dat.backend.model.entities.Spaer;
-import dat.backend.model.entities.Stolpe;
-import dat.backend.model.entities.Tag;
+import dat.backend.model.entities.*;
 import dat.backend.model.persistence.ConnectionPool;
 import dat.backend.model.persistence.SpaerFacade;
 
@@ -20,6 +17,7 @@ import java.util.List;
 @WebServlet(name = "Premadecarport", value = "/premadecarport")
 public class Premadecarport extends HttpServlet {
     private ConnectionPool connectionPool;
+
 
     @Override
     public void init() throws ServletException
@@ -51,7 +49,12 @@ public class Premadecarport extends HttpServlet {
         request.setAttribute("rem", rem);
         request.setAttribute("tag", tag);
 
-
+        Carport carport = new Carport(width,length, height, shed, spaer, rem, stolpe, tag);
+        ShoppingCart sc = new ShoppingCart();
+        sc.addCarport(carport);
+        request.setAttribute("sc", sc);
+        HttpSession session = request.getSession();
+        session.setAttribute("carport", carport);
 
 
 

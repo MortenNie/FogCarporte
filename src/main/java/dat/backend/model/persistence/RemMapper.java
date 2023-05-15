@@ -26,7 +26,7 @@ public class RemMapper {
                     String remName = rs.getString("rem_name");
                     double length = rs.getDouble("length");
                     int price = rs.getInt("price");
-                    int quantity = rs.getInt("quantity");
+                    int quantity = 1;
 
 
                     Rem newRem = new Rem(remId, remName, length, price, quantity);
