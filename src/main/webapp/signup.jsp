@@ -42,9 +42,14 @@
                                     <small id="nopasswordshare" class="form-text text-muted">We'll never share your password with anyone.</small> <!-- Basically bare for sjov, synes det kunne være sjovt at tilføje. -->
                                 </div>
                                 <br/>
-                                <button type="submit" class="btn btn-primary shadow-sm">Submit</button>
+                                <button type="submit" class="btn btn-primary shadow">Sign up</button>
                             </form>
-
+                            <br/>
+                            <br/>
+                            <p>Or if you already have an account <br/>
+                                Log in here instead:
+                            </p>
+                            <a class="btn btn-primary shadow" href="${pageContext.request.contextPath}/login.jsp" role="button">Login</a>
                         </div>
                     </div>
                 </div>
