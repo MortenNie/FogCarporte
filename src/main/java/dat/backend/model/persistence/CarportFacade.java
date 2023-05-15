@@ -9,4 +9,8 @@ public class CarportFacade {
         return CarportMapper.CreateCarportAndReturnCarportId(width,length,height,shed,orderId, connectionPool);
     }
 
+    public static int returnCarportId(double width, double length, double height, boolean shed, ConnectionPool connectionPool) {
+
+        return CarportMapper.returnCarportId(width,length,height,shed,connectionPool);
+    }
 }

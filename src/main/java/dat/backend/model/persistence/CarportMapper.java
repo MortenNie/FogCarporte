@@ -50,5 +50,37 @@ class CarportMapper {
         return ts;
     }
 
+    public static int returnCarportId(double width, double length, double height, boolean shed, ConnectionPool connectionPool) {
+        Logger.getLogger("web").log(Level.INFO, "");
+        int ts = -1;
+
+        String sql = "insert into carport (width, length, height, shed) values (?,?,?,?)";
+
+        try (Connection connection = connectionPool.getConnection()) {
+            try (PreparedStatement ps = connection.prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS)) {
+
+
+                ps.setDouble(1, width);
+                ps.setDouble(2,length);
+                ps.setDouble(3,height);
+                ps.setBoolean(4, shed);
+
+                ps.executeUpdate();
+                ResultSet rs = ps.getGeneratedKeys();
+                rs.next();
+
+
+                ts = rs.getInt(1);
+
+            }
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return ts;
+    }
 
 }
+
