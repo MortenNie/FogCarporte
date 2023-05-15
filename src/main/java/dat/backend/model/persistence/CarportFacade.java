@@ -3,6 +3,8 @@ package dat.backend.model.persistence;
 import dat.backend.model.entities.Carport;
 import dat.backend.model.exceptions.DatabaseException;
 
+import java.util.List;
+
 public class CarportFacade {
 
     public static int CreateCarportAndReturnCarportId(double width, double length, double height, boolean shed, int orderId, ConnectionPool connectionPool) {
@@ -21,6 +23,11 @@ public class CarportFacade {
     }
     public static void deleteCarport(int carportId, ConnectionPool connectionPool) throws DatabaseException {
         CarportMapper.deleteCarport(carportId, connectionPool);
+
+    }
+    public static List<Carport> selectCarportsFromOrderId(int orderId, ConnectionPool connectionPool) {
+        
+        return CarportMapper.selectCarportsFromOrderId(orderId,connectionPool);
 
     }
 }
