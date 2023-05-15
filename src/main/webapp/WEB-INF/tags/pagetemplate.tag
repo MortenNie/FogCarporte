@@ -21,7 +21,7 @@
 <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container menu">
-            <a class="navbar-brand" href="index.js">
+            <a class="navbar-brand" href="index.jsp">
                 <img class="h-100" src="https://cms.johannesfog.dk/media/cdcndnkg/logo.svg?ud=sP1o1-ho2gg" alt="logo"/>
             </a>
 
@@ -32,13 +32,13 @@
 
             <div class="collapse navbar-collapse w-100 justify-content-between" id="navbarNavAltMarkup">
                 <div class="navbar-nav flex-grow-1">
-                    <a class="nav-item nav-link" href="${pageContext.request.contextPath}/">Page 1</a>
-                    <a class="nav-item nav-link" href="${pageContext.request.contextPath}/">Page 2</a>
+                    <a class="nav-item nav-link" href="${pageContext.request.contextPath}/WEB-INF/welcome.jsp">Home</a>
+                    <a class="nav-item nav-link" href="${pageContext.request.contextPath}/carportpage.jsp">Order Carport</a>
                     <a class="nav-item nav-link" href="${pageContext.request.contextPath}/">Page 3</a>
                 </div>
 
                 <div class="d-flex align-items-center nav-item--login">
-                    <a class="nav-item nav-link  d-flex flex-column align-items-center text-secondary" href="${pageContext.request.contextPath}/">
+                    <a class="nav-item nav-link  d-flex flex-column align-items-center text-secondary" href="${pageContext.request.contextPath}/shoppingcart.jsp">
                         &#128722; <span>Shopping Cart</span></a>
                     <c:if test="${sessionScope.user == null }">
                         <a class="nav-item nav-link d-flex flex-column align-items-center text-secondary" href="${pageContext.request.contextPath}/login.jsp">&#128274;<span>Login</span></a>

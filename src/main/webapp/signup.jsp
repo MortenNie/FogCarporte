@@ -26,7 +26,7 @@
             Password: <input type="password" name="password"><br/>
             <br/>
 
-            <button type="submit">Sign up</button>
+            <button class="btn btn-warning shadow box-shadow--4dp" type="submit">Sign up</button>
         </form>
 
     </jsp:body>

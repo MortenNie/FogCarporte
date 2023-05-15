@@ -14,7 +14,15 @@
 
     <jsp:body>
 
-        <p>Placeholder placeholder placeholder </p>
+        <p>Welcome to Fog's Carports!</p>
+        <p>This is the best place in Denmark to order professional Carports.</p>
+        <p>We've got many years of experience and an overall 5/5 star rating.</p>
+        <p>&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+
+
+        <br/>
+        <br/>
+
 
         <c:if test="${sessionScope.user != null}">
             <p>You are logged in with the role of "${sessionScope.user.role}".</p>
