@@ -100,5 +100,24 @@ class CarportMapper {
 
     }
 
+
+    public static void deleteCarport(int carportId, ConnectionPool connectionPool) throws DatabaseException {
+        Logger.getLogger("web").log(Level.INFO, "");
+        String sql = "DELETE from carport Where carport_id = ?";
+
+        try (Connection connection = connectionPool.getConnection()) {
+            try (PreparedStatement ps = connection.prepareStatement(sql)) {
+
+                ps.setInt(1, carportId);
+                ps.executeUpdate();
+
+
+            }
+        } catch (SQLException ex) {
+            throw new DatabaseException(ex, "Could not insert order into database");
+        }
+
+
+    }
 }
 
