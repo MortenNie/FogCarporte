@@ -20,7 +20,7 @@
     </jsp:attribute>
 
     <jsp:body>
-        
+
         <table class="table table-striped mt-4">
 
             <form method="post" >

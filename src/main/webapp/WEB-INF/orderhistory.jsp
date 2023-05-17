@@ -47,6 +47,7 @@
                     <td><button name="orderdetails" type="submit" value="${item.orderId}" formaction="orderdetails" class=" btn btn-primary"> See order details </button></td>
                     <c:if test="${sessionScope.user.role == 'admin'}">
                         <td><button name="deleteorder" type="submit" value="${item.orderId}" formaction="deleteorder" class=" btn btn-primary"> Delete this order </button></td>
+                        <td><button name="updateorderstatus" type="submit" value="${item.orderId}" formaction="updateorderstatus" class=" btn btn-primary"> Change order status </button></td>
                     </c:if>
 
                 </tr>

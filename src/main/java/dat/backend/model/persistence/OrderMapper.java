@@ -112,6 +112,7 @@ public class OrderMapper {
     }
 
 
+
     public static void deleteOrder(int orderId,  ConnectionPool connectionPool) {
 
         String sql = "DELETE FROM fogcarporte.order WHERE order_id = ?";
@@ -128,5 +129,64 @@ public class OrderMapper {
             e.printStackTrace();
         }
     }
+
+    public static void updateOrderStatus(int orderId,String status, ConnectionPool connectionPool ) {
+
+        Logger.getLogger("web").log(Level.INFO, "");
+
+        String sql = " UPDATE fogcarporte.order SET status = ? WHERE order_id=?";
+
+        try (Connection connection = connectionPool.getConnection()) {
+
+            try (PreparedStatement ps = connection.prepareStatement(sql)) {
+
+                ps.setString(1, status);
+                ps.setInt(2,orderId);
+
+
+                ps.executeUpdate();
+
+
+            }
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+
+    }
+
+    public static Order selectOrderFromOrderId(int orderId ,ConnectionPool connectionPool) {
+        Logger.getLogger("web").log(Level.INFO, "");
+        Order order = new Order() ;
+        String sql = "SELECT * FROM fogcarporte.order WHERE order_id = ?";
+
+        try (Connection connection = connectionPool.getConnection()){
+
+            try(PreparedStatement ps = connection.prepareStatement(sql)){
+                ps.setInt(1, orderId);
+                ResultSet rs = ps.executeQuery();
+                while (rs.next()) {
+                    int OrderId = rs.getInt("order_id");
+                    Timestamp date = rs.getTimestamp("date");
+                    String name = rs.getString("name");
+                    String adress =rs.getString("adress");
+                    String status = rs.getString("status");
+                    double price = rs.getDouble("price");
+
+
+                     order = new Order(OrderId,name,adress, date,status,price);
+
+
+
+                }
+
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return order;
+    }
+
 
 }
