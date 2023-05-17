@@ -25,16 +25,16 @@
                 <img class="h-100" src="https://cms.johannesfog.dk/media/cdcndnkg/logo.svg?ud=sP1o1-ho2gg" alt="logo"/>
             </a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+            <button class="navbar-toggler navbar-toggler-icon" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                     aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+
             </button>
 
             <div class="collapse navbar-collapse w-100 justify-content-between" id="navbarNavAltMarkup">
                 <div class="navbar-nav flex-grow-1">
-                    <a class="nav-item nav-link" href="${pageContext.request.contextPath}/WEB-INF/welcome.jsp">Home</a>
+                    <a class="nav-item nav-link" href="${pageContext.request.contextPath}/welcome.jsp">Home</a>
                     <a class="nav-item nav-link" href="${pageContext.request.contextPath}/carportpage.jsp">Order Carport</a>
-                    <a class="nav-item nav-link" href="${pageContext.request.contextPath}/">Page 3</a>
+                    <a class="nav-item nav-link" href="${pageContext.request.contextPath}/">Image wall of our carports</a>
                 </div>
 
                 <div class="d-flex align-items-center nav-item--login">

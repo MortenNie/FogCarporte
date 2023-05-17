@@ -44,7 +44,7 @@
                 <p>Choose the length of your custom carport</p>
                 <div class="form-group dropdownLength">
                     <label for="dropdownLength">Length</label>
-                    <select class="form-control" name="Length" id="dropdownLength"> //onmousedown="if(this.options.length>10){this.size=10;}"  onchange='this.size=0;' onblur="this.size=0;">
+                    <select class="form-control custom-dropdownLength" name="Length" id="dropdownLength">
                         <option value="3.2">3.2</option>
                         <option value="3.4">3.4</option>
                         <option value="3.6">3.6</option>

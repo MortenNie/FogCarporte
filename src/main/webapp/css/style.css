@@ -26,27 +26,52 @@ header, footer {
     background-color: white;
 }
 
+
 .dropdownHeight {
     max-width: 300px ! important;
     max-height: 140px ! important;
-    overflow-y: auto;
+    overflow-y: auto; !important;
 
 }
-
 .dropdownWidth {
+    height: auto;
     max-width: 300px !important;
     max-height: 140px !important;
-    overflow-y: auto;
+    overflow-y: auto !important;
+    overflow-x: hidden; !important;
+
 }
 
 .dropdownLength {
+    height: auto;
     max-width: 300px !important;
     max-height: 140px !important;
     overflow-y: auto;
+    overflow-x: hidden;
+
+
 }
 
 .dropdownShed {
     max-width: 300px !important;
     max-height: 140px !important;
     overflow-y: auto;
+    overflow-x: hidden; !important;
+}
+
+.custom-table.table-striped>tbody>tr:nth-of-type(odd)>* {
+    background-color: #174B87;
+    justify-content: space-around;
+    text-align: center;
+    align-content: space-around;
+    color: white; !important;
+
+}
+
+.custom-table.table-striped tbody tr:nth-of-type(even) {
+    background-color: lightgrey;
+    justify-content: space-around;
+    text-align: center;
+    align-content: space-around;
+    color: black; !important;
 }

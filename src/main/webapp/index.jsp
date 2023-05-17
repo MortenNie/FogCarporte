@@ -16,8 +16,8 @@
 
         <p>Welcome to Fog's Carports!</p>
         <p>This is the best place in Denmark to order professional Carports.</p>
-        <p>We've got many years of experience and an overall 5/5 star rating.</p>
-        <p>&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+        <p>We've got many years of experience and an overall 5/5 &#11088; rating.</p>
+        <p>&#11088;&#11088;&#11088;&#11088;&#11088;</p>
 
 
         <br/>
