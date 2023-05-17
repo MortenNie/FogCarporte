@@ -26,7 +26,7 @@ public class CarportFacade {
 
     }
     public static List<Carport> selectCarportsFromOrderId(int orderId, ConnectionPool connectionPool) {
-        
+
         return CarportMapper.selectCarportsFromOrderId(orderId,connectionPool);
 
     }

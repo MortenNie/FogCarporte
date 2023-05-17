@@ -18,4 +18,15 @@ public class OrderFacade {
     public static List<Order> selectAllOrdersFromUser(String user,ConnectionPool connectionPool) {
         return OrderMapper.selectAllOrdersFromUser(user,connectionPool);
     }
+
+
+
+
+
+
+    public static void deleteOrder(int orderId, ConnectionPool connectionPool) {
+
+        OrderMapper.deleteOrder(orderId, connectionPool);
+
+    }
 }

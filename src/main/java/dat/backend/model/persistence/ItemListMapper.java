@@ -77,4 +77,77 @@ public class ItemListMapper {
 
     }
 
+   public static void deleteFromItemSpaer(int carportId, ConnectionPool connectionPool) throws DatabaseException {
+        Logger.getLogger("web").log(Level.INFO, "");
+        String sql = "DELETE from itemlistspaer Where carport_id = ?";
+
+        try (Connection connection = connectionPool.getConnection()) {
+            try (PreparedStatement ps = connection.prepareStatement(sql)) {
+
+                ps.setInt(1, carportId);
+                ps.executeUpdate();
+
+
+            }
+        } catch (SQLException ex) {
+            throw new DatabaseException(ex, "Could not delete from itemlistspaer");
+        }
+
+    }
+
+    public static void deleteFromItemRem(int carportId, ConnectionPool connectionPool) throws DatabaseException {
+        Logger.getLogger("web").log(Level.INFO, "");
+        String sql = "DELETE from itemlistrem Where carport_id = ?";
+
+        try (Connection connection = connectionPool.getConnection()) {
+            try (PreparedStatement ps = connection.prepareStatement(sql)) {
+
+                ps.setInt(1, carportId);
+                ps.executeUpdate();
+
+
+            }
+        } catch (SQLException ex) {
+            throw new DatabaseException(ex, "Could not delete from itemlistrem");
+        }
+
+    }
+
+
+    public static void deleteFromItemStolpe(int carportId, ConnectionPool connectionPool) throws DatabaseException {
+        Logger.getLogger("web").log(Level.INFO, "");
+        String sql = "DELETE from itemliststolpe Where carport_id = ?";
+
+        try (Connection connection = connectionPool.getConnection()) {
+            try (PreparedStatement ps = connection.prepareStatement(sql)) {
+
+                ps.setInt(1, carportId);
+                ps.executeUpdate();
+
+
+            }
+        } catch (SQLException ex) {
+            throw new DatabaseException(ex, "Could not delete from itemliststolpe");
+        }
+
+    }
+
+    public static void deleteFromItemTag(int carportId, ConnectionPool connectionPool) throws DatabaseException {
+        Logger.getLogger("web").log(Level.INFO, "");
+        String sql = "DELETE from itemlisttag Where carport_id = ?";
+
+        try (Connection connection = connectionPool.getConnection()) {
+            try (PreparedStatement ps = connection.prepareStatement(sql)) {
+
+                ps.setInt(1, carportId);
+                ps.executeUpdate();
+
+
+            }
+        } catch (SQLException ex) {
+            throw new DatabaseException(ex, "Could not delete from itemlistspaer");
+        }
+
+    }
+
 }

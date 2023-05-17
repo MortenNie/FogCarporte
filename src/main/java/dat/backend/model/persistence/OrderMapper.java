@@ -110,4 +110,23 @@ public class OrderMapper {
 
         return orderList;
     }
+
+
+    public static void deleteOrder(int orderId,  ConnectionPool connectionPool) {
+
+        String sql = "DELETE FROM fogcarporte.order WHERE order_id = ?";
+
+        try (Connection connection = connectionPool.getConnection()){
+
+            try(PreparedStatement ps = connection.prepareStatement(sql)){
+
+                ps.setInt(1,orderId);
+                ps.executeUpdate();
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
 }

@@ -113,7 +113,7 @@ class CarportMapper {
 
             }
         } catch (SQLException ex) {
-            throw new DatabaseException(ex, "Could not insert order into database");
+            throw new DatabaseException(ex, "could not delete carport");
         }
 
 
@@ -146,7 +146,6 @@ class CarportMapper {
                     Rem rem = new Rem(rs.getInt("rem_id"), rs.getString("rem_name"), rs.getDouble("rem.length"), rs.getInt("rem.price"),rs.getInt("itemlistrem.quantity"));
                     Stolpe stolpe = new Stolpe(rs.getInt("stolpe_id"), rs.getString("stolpe_name"), rs.getDouble("stolpe.length"), rs.getInt("stolpe.price"),rs.getInt("itemliststolpe.quantity"));
                     Tag tag = new Tag(rs.getInt("tag_id"), rs.getString("tag_name"), rs.getDouble("tag.length"), rs.getInt("tag.price"),rs.getInt("itemlisttag.quantity"));
-
                     Carport newCarport = new Carport(carportId, width,length,height, shed, spaer, rem,stolpe,tag);
                     carportList.add(newCarport);
 

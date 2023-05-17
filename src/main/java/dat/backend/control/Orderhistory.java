@@ -38,7 +38,7 @@ public class Orderhistory extends HttpServlet {
             request.setAttribute("orderList",orderList);
             request.getRequestDispatcher("WEB-INF/orderhistory.jsp").forward(request,response);
         }
-            if (user.getRole().equals("user")){
+           if (user.getRole().equals("user")){
                 List<Order> orderList = OrderFacade.selectAllOrdersFromUser(user.getUsername(), connectionPool);
                 request.setAttribute("orderList",orderList);
                 request.getRequestDispatcher("WEB-INF/orderhistory.jsp").forward(request,response);
