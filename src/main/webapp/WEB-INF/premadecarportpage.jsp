@@ -125,13 +125,16 @@
 
 
             </table>
-
-            <button type="submit" formaction="addtoshoppingcart" value="${requestScope.sc.totalPrice}" name="addtoshoppingcart">Add to shoppingcart </button>
+                <br/>
+                <div class="button-container">
+                <button type="submit" formaction="addtoshoppingcart" class="btn btn-primary custom-button shadow" value="${requestScope.sc.totalPrice}" name="addtoshoppingcart">Add to Shoppingcart</button>
+                </div>
+            </form>
             <br/>
-
-        </form>
             <form method="post">
-                <button type="submit" formaction="seeshoppingcart" value="${requestScope.sc.totalPrice}" name="seeshoppingcart">Shopping cart </button>
+                <div class="button-container">
+                <button type="submit" formaction="seeshoppingcart" class="btn btn-success shadow" value="${requestScope.sc.totalPrice}" name="seeshoppingcart">View Shoppingcart</button>
+                </div>
             </form>
             <br/>
             <br/>

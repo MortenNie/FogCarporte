@@ -24,9 +24,9 @@
 
 
         <c:if test="${sessionScope.user != null}">
-            <p> list of materials:
-            <form method="post" >
-            <table class="table table-striped mt-4">
+            <p> list of materials: </p>
+            <form method="post">
+            <table class="table table-striped mt-4 custom-table">
 
 
                 <tr>
@@ -42,14 +42,14 @@
                 <tr>
                     <td> ${requestScope.spaer.spaerId}</td>
                     <td> ${requestScope.spaer.spaerName} </td>
-                    <td> ${requestScope.spaer.price} </td>>
-                    <td> ${requestScope.spaer.length} </td>>
-                    <td> ${requestScope.spaer.quantity} </td>>
+                    <td> ${requestScope.spaer.price} </td>
+                    <td> ${requestScope.spaer.length} </td>
+                    <td> ${requestScope.spaer.quantity} </td>
 
                 </tr>
 
             </table>
-            <table class="table table-striped mt-4">
+            <table class="table table-striped mt-4 custom-table">
 
 
                 <tr>
@@ -65,15 +65,15 @@
                 <tr>
                     <td> ${requestScope.stolpe.stolpeId}</td>
                     <td> ${requestScope.stolpe.stolpeName} </td>
-                    <td> ${requestScope.stolpe.price} </td>>
-                    <td> ${requestScope.stolpe.length} </td>>
-                    <td> ${requestScope.stolpe.quantity} </td>>
+                    <td> ${requestScope.stolpe.price} </td>
+                    <td> ${requestScope.stolpe.length} </td>
+                    <td> ${requestScope.stolpe.quantity} </td>
 
                 </tr>
 
             </table>
 
-            <table class="table table-striped mt-4">
+            <table class="table table-striped mt-4 custom-table">
 
 
                 <tr>
@@ -89,16 +89,16 @@
                 <tr>
                     <td> ${requestScope.rem.remId}</td>
                     <td> ${requestScope.rem.remName} </td>
-                    <td> ${requestScope.rem.price} </td>>
-                    <td> ${requestScope.rem.length} </td>>
-                    <td> ${requestScope.rem.quantity} </td>>
+                    <td> ${requestScope.rem.price} </td>
+                    <td> ${requestScope.rem.length} </td>
+                    <td> ${requestScope.rem.quantity} </td>
 
                 </tr>
 
             </table>
 
 
-            <table class="table table-striped mt-4">
+            <table class="table table-striped mt-4 custom-table">
 
 
                 <tr>
@@ -114,15 +114,15 @@
                 <tr>
                     <td> ${requestScope.tag.tagId}</td>
                     <td> ${requestScope.tag.tagName} </td>
-                    <td> ${requestScope.tag.price} </td>>
-                    <td> ${requestScope.tag.length} </td>>
-                    <td> ${requestScope.tag.quantity} </td>>
+                    <td> ${requestScope.tag.price} </td>
+                    <td> ${requestScope.tag.length} </td>
+                    <td> ${requestScope.tag.quantity} </td>
 
                 </tr>
 
             </table>
 
-            <table class="table table-striped mt-4">
+            <table class="table table-striped mt-4 custom-table">
 
 
 
@@ -135,12 +135,19 @@
 
 
             </table>
-            <button type="submit" formaction="addtoshoppingcart" value="${requestScope.sc.totalPrice}" name="addtoshoppingcart">add to shoppingcart </button>
-
+                <div class="button-container">
+            <button type="submit" formaction="addtoshoppingcart" class="btn btn-primary custom-button shadow" value="${requestScope.sc.totalPrice}" name="addtoshoppingcart">Add to Shoppingcart </button>
+                </div>
         </form>
+            <br/>
            <form method="post">
-            <button type="submit" formaction="seeshoppingcart" value="${requestScope.sc.totalPrice}" name="seeshoppingcart">see shopping cart </button>
-            </form>
+               <div class="button-container">
+            <button type="submit" formaction="seeshoppingcart" class="btn btn-success shadow" value="${requestScope.sc.totalPrice}" name="seeshoppingcart">View Shoppingcart </button>
+               </div>
+           </form>
+            <br/>
+            <br/>
+
         </c:if>
 
         <c:if test="${sessionScope.user == null}">

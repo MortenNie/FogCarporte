@@ -20,8 +20,8 @@
             <p>You are logged in with the role of "${sessionScope.user.role}".</p>
             <form method="post">
 
-                <button formaction="ordercarport" type="submit" class="align-baseline btn btn-outline-success">Order a carport</button>
-                <button formaction="orderhistory" type="submit" class="align-baseline btn btn-outline-success"> See all orders</button>
+                <button formaction="ordercarport" type="submit" class="align-baseline btn btn-outline-success shadow">Order a carport</button>
+                <button formaction="orderhistory" type="submit" class="align-baseline btn btn-outline-success shadow">See all orders</button>
 
 
             </form>

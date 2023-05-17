@@ -38,15 +38,15 @@ header, footer {
     max-width: 300px !important;
     max-height: 140px !important;
     overflow-y: auto !important;
-    overflow-x: hidden; !important;
+    overflow-x: hidden !important;
 
 }
 
-.dropdownLength {
+.form-group.dropdownLength .form-control {
     height: auto;
-    max-width: 300px !important;
-    max-height: 140px !important;
-    overflow-y: auto;
+    max-width: 300px;
+    max-height: 140px;
+    overflow-y: auto !important;
     overflow-x: hidden;
 
 
@@ -75,3 +75,13 @@ header, footer {
     align-content: space-around;
     color: black; !important;
 }
+
+
+.button-container .custom-button {
+
+    background-color: #174B87; !important;
+    border-color: #174B87 !important;
+    color: white; !important;
+
+}
+
