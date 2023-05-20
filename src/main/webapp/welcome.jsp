@@ -22,8 +22,10 @@
 
                 <button formaction="ordercarport" type="submit" class="align-baseline btn btn-outline-success shadow">Order a carport</button>
                 <button formaction="orderhistory" type="submit" class="align-baseline btn btn-outline-success shadow">See all orders</button>
+            <c:if test="${sessionScope.user.role == 'admin'}">
+                <button formaction="addnewmaterials" type="submit" class="align-baseline btn btn-outline-success shadow">Add new materials to DB</button>
 
-
+            </c:if>
             </form>
 
         </c:if>
