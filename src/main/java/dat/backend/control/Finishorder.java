@@ -44,16 +44,15 @@ public class Finishorder extends HttpServlet {
         double materialPrice = (double) session.getAttribute("materialPrice");
         double price = MathFunctions.priceWithDaekningsGrad(materialPrice,0.4);
         int orderId = -1;
-        int carportId = -1;
         List<Integer>listOfCarportIds = new ArrayList<>();
         try {
           orderId = OrderFacade.addOrder(clientName,clientAdress,user.getUsername(),"pending", price, connectionPool);
           for (Carport s: listofCarports) {
               listOfCarportIds.add(s.getCarportId());
-              ItemListMapper.AddToItemListSpaer(s.getSpaer().getSpaerId(),s.getSpaer().getQuantity(),carportId, connectionPool);
-              ItemListMapper.AddToItemListRem(s.getRem().getRemId(),s.getRem().getQuantity(),carportId, connectionPool);
-              ItemListMapper.AddToItemListStolpe(s.getStolpe().getStolpeId(),s.getStolpe().getQuantity(),carportId, connectionPool);
-              ItemListMapper.AddToItemListTag(s.getTag().getTagId(),s.getTag().getQuantity(),carportId, connectionPool);
+              ItemListMapper.AddToItemListSpaer(s.getSpaer().getSpaerId(),s.getSpaer().getQuantity(),s.getCarportId(), connectionPool);
+              ItemListMapper.AddToItemListRem(s.getRem().getRemId(),s.getRem().getQuantity(),s.getCarportId(), connectionPool);
+              ItemListMapper.AddToItemListStolpe(s.getStolpe().getStolpeId(),s.getStolpe().getQuantity(),s.getCarportId(), connectionPool);
+              ItemListMapper.AddToItemListTag(s.getTag().getTagId(),s.getTag().getQuantity(),s.getCarportId(), connectionPool);
           }
         } catch (DatabaseException e) {
             e.printStackTrace();
@@ -70,7 +69,7 @@ public class Finishorder extends HttpServlet {
 
         shoppingCart.getCarports().clear();
         session.removeAttribute("shoppingcart");
-        request.getRequestDispatcher("WEB-INF/welcome.jsp").forward(request, response);
+        request.getRequestDispatcher("welcome.jsp").forward(request, response);
 
     }
 

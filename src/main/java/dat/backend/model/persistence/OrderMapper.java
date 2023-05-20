@@ -189,4 +189,29 @@ public class OrderMapper {
     }
 
 
+     static void updateOrderPrice(int orderId,double price, ConnectionPool connectionPool ) {
+
+        Logger.getLogger("web").log(Level.INFO, "");
+
+        String sql = " UPDATE fogcarporte.order SET price = ? WHERE order_id=?";
+
+        try (Connection connection = connectionPool.getConnection()) {
+
+            try (PreparedStatement ps = connection.prepareStatement(sql)) {
+
+                ps.setDouble(1, price);
+                ps.setInt(2,orderId);
+
+
+                ps.executeUpdate();
+
+
+            }
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+
+    }
+
+
 }

@@ -41,4 +41,9 @@ public class Stolpe {
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
+
+    @Override
+    public String toString() {
+        return "Stolpe: " + stolpeName + ", Length: " + length + ", Quantity: " + quantity;
+    }
 }
