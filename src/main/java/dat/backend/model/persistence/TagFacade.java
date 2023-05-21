@@ -16,4 +16,10 @@ public class TagFacade {
         TagMapper.addTagToDB(tagName, length, price, connectionPool);
 
     }
+
+    static void deleteTag(int tagId, ConnectionPool connectionPool) throws DatabaseException {
+
+        TagMapper.deleteTag(tagId, connectionPool);
+
+    }
 }

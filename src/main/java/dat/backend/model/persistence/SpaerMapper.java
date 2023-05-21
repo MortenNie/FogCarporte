@@ -64,5 +64,25 @@ public class SpaerMapper {
 
     }
 
+    static void deleteSpaer(int spaerId, ConnectionPool connectionPool) throws DatabaseException {
+        Logger.getLogger("web").log(Level.INFO, "");
+        String sql = "DELETE from spaer Where spaer_id = ?";
+
+        try (Connection connection = connectionPool.getConnection()) {
+            try (PreparedStatement ps = connection.prepareStatement(sql)) {
+
+                ps.setInt(1, spaerId);
+                ps.executeUpdate();
+
+
+            }
+        } catch (SQLException ex) {
+            throw new DatabaseException(ex, "could not delete spaer");
+        }
+
+
+    }
+
+
 
 }

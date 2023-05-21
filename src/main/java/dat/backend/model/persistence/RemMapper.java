@@ -63,4 +63,23 @@ public class RemMapper {
 
     }
 
+     static void deleteRem(int remId, ConnectionPool connectionPool) throws DatabaseException {
+        Logger.getLogger("web").log(Level.INFO, "");
+        String sql = "DELETE from rem Where rem_id = ?";
+
+        try (Connection connection = connectionPool.getConnection()) {
+            try (PreparedStatement ps = connection.prepareStatement(sql)) {
+
+                ps.setInt(1, remId);
+                ps.executeUpdate();
+
+
+            }
+        } catch (SQLException ex) {
+            throw new DatabaseException(ex, "could not delete rem");
+        }
+
+
+    }
+
 }

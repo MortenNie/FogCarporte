@@ -18,4 +18,10 @@ public class SpaerFacade {
         SpaerMapper.addSpaerToDB(spaerName, length, price, connectionPool);
 
     }
+
+    public static void deleteSpaer(int spaerId, ConnectionPool connectionPool) throws DatabaseException {
+
+        SpaerMapper.deleteSpaer(spaerId, connectionPool);
+
+    }
 }

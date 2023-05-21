@@ -16,4 +16,10 @@ public class StolpeFacade {
         StolpeMapper.addStolpeToDB(stolpeName, length, price, connectionPool);
 
     }
+
+    public static void deleteStolpe(int stolpeId, ConnectionPool connectionPool) throws DatabaseException {
+
+        StolpeMapper.deleteStolpe(stolpeId, connectionPool);
+
+    }
 }

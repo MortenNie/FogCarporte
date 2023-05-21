@@ -64,5 +64,21 @@ public class TagMapper {
 
     }
 
+    static void deleteTag(int tagId, ConnectionPool connectionPool) throws DatabaseException {
+        Logger.getLogger("web").log(Level.INFO, "");
+        String sql = "DELETE from tag Where tag_id = ?";
 
+        try (Connection connection = connectionPool.getConnection()) {
+            try (PreparedStatement ps = connection.prepareStatement(sql)) {
+
+                ps.setInt(1, tagId);
+                ps.executeUpdate();
+
+
+            }
+        } catch (SQLException ex) {
+            throw new DatabaseException(ex, "could not delete tag");
+        }
+
+    }
 }

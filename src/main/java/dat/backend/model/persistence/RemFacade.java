@@ -19,5 +19,11 @@ public class RemFacade {
 
     }
 
+   public static void deleteRem(int remId, ConnectionPool connectionPool) throws DatabaseException {
+        RemMapper.deleteRem(remId, connectionPool);
+
+
+    }
+
 }
 
