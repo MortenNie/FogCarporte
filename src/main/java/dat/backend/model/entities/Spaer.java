@@ -42,4 +42,9 @@ public class Spaer {
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
+
+    @Override
+    public String toString() {
+        return "Spaer: " + spaerName + ", Length: " + length + ", Quantity: " + quantity;
+    }
 }

@@ -48,6 +48,8 @@
                     <c:if test="${sessionScope.user.role == 'admin'}">
                         <td><button name="deleteorder" type="submit" value="${item.orderId}" formaction="deleteorder" class=" btn btn-primary"> Delete this order </button></td>
                         <td><button name="updateorderstatus" type="submit" value="${item.orderId}" formaction="updateorderstatus" class=" btn btn-primary"> Change order status </button></td>
+                        <td><button name="discounttenpercent" type="submit" value="${item.orderId}" formaction="discounttenpercent" class=" btn btn-primary"> give 10% discount </button></td>
+                        <td><button name="givecustomprice" type="submit" value="${item.orderId}" formaction="givecustomprice" class=" btn btn-primary"> give custom price </button></td>
                     </c:if>
 
                 </tr>

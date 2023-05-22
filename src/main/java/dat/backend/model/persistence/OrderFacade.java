@@ -36,4 +36,9 @@ public class OrderFacade {
 
         return OrderMapper.selectOrderFromOrderId(orderId,connectionPool);
     }
+
+
+   public static void updateOrderPrice(int orderId,double price, ConnectionPool connectionPool ) {
+        OrderMapper.updateOrderPrice(orderId, price, connectionPool);
+    }
 }

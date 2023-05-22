@@ -139,6 +139,7 @@ public class MathFunctions {
         }
 
         int quantity = MathFunctions.amountOfMaterialTag(length); // find mængde tagplader.
+
         finalTag.setQuantity(quantity);
         return finalTag;
     }
