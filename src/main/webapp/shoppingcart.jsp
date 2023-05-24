@@ -41,7 +41,7 @@
 
       </table>
 
-      <button type="submit" formaction="orderform" value="${sessionScope.shoppingcart.totalPrice}" name="orderform">Confirm order and enter details </button>
+      <button type="submit" formaction="orderform" class="btn btn-primary shadow custom-button" value="${sessionScope.shoppingcart.totalPrice}" name="orderform">Confirm order and enter details </button>
 
     </form>
 

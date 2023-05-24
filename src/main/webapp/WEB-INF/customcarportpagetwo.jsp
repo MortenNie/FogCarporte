@@ -12,11 +12,11 @@
 
 <t:pagetemplate>
     <jsp:attribute name="header">
-         Welcome to the premade carport page.
+         Welcome to the Custom carport page.
     </jsp:attribute>
 
     <jsp:attribute name="footer">
-        Welcome to the premade carport page.
+        Welcome to the Custom carport page.
     </jsp:attribute>
 
     <jsp:body>
