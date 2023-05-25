@@ -1,0 +1,98 @@
+@startuml
+title FogCarporte users navigation diagram
+start
+:Index.jsp;
+
+if (Already a user?) then (yes)
+  :Login link;
+  :login.jsp;
+  :Login servlet;
+
+
+  if (Valid Credentials?) then (yes)
+   :welcome.jsp;
+   :Ordercarport servlet;
+   :Proceed to Order;
+
+  else (no)
+    : error.jsp;
+    :Display Error Message;
+    stop
+
+  endif
+else (no)
+   :Signup link;
+  :signup.jsp;
+  :Signup servlet;
+  :index.jsp;
+  :Login link;
+  :login.jsp;
+  :Login servlet;
+   if (Valid Credentials?) then (yes)
+  :welcome.jsp;
+  :Ordercarport servlet;
+  :Proceed to Order;
+    else (no)
+        : error.jsp;
+        :Display Error Message;
+        stop
+endif
+endif
+:carportpage.jsp;
+
+if (Carport type?) then (premade)
+    :Select pre-made carport image button;
+    :Premadecarport servlet;
+  :premadecarportpage.jsp;
+
+
+
+
+
+else (custom)
+  :Select custom carport image button;
+  :Customcarport servlet;
+  :customcarportpage.jsp;
+  :Choose Height, Length, Width, Shed;
+  :Select submit button;
+  :Cinfirmcustomcarport servlet;
+  :customcarporttwo.jsp;
+  endif
+  if(Continue to Add to shopping cart?)then
+  :Select add to shopping cart button;
+
+  else(view shopping cart)
+  :Select view items;
+  :Seehoppingcart servlet;
+  :shoppingcart.jsp;
+
+    stop
+
+endif
+:Addtoshoppingcart servlet;
+:carportpage.jsp;
+: Select shoppingcart from navbar;
+
+if (shoppingcart.jsp) then (confirm order)
+ :Select confirm order button;
+ :Orderform servlet;
+ :orderform.jsp;
+ : Type Name and Address ;
+ :Select get offer button;
+ :Finishorder servlet;
+ :Welcome.jsp;
+ :Here you can click on Order history button;
+ :Orderhistory servlet;
+ :orderhistory.jsp;
+ :Here you can see your order and choose to see order details;
+ :Choose See order details button;
+ :Orderdetails servlet;
+ :orderdetails.jsp;
+ stop
+else (delete order)
+: delete order button;
+:Deletecarportfromcart servlet;
+:shoppingcart.jsp;
+
+stop
+@enduml

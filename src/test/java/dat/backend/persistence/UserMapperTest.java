@@ -34,10 +34,10 @@ class UserMapperTest
             try (Statement stmt = testConnection.createStatement())
             {
                 // Create test database - if not exist
-                stmt.execute("CREATE DATABASE  IF NOT EXISTS startcode_test;");
+                stmt.execute("CREATE DATABASE  IF NOT EXISTS fogcarporte_test;");
 
                 // TODO: Create user table. Add your own tables here
-                stmt.execute("CREATE TABLE IF NOT EXISTS startcode_test.user LIKE startcode.user;");
+                stmt.execute("CREATE TABLE IF NOT EXISTS fogcarporte_test.user LIKE fogcarporte.user;");
             }
         }
         catch (SQLException throwables)
@@ -46,6 +46,7 @@ class UserMapperTest
             fail("Database connection failed");
         }
     }
+
 
     @BeforeEach
     void setUp()
