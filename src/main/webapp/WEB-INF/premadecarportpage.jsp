@@ -128,7 +128,7 @@
                 <br/>
                 <div class="button-container">
                 <button type="submit" formaction="addtoshoppingcart" class="btn btn-primary custom-button shadow" value="${requestScope.sc.totalPrice}" name="addtoshoppingcart">Add to Shoppingcart</button>
-                </div>
+            </div>
             </form>
             <br/>
             <form method="post">

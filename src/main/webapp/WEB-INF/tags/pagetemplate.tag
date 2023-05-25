@@ -34,7 +34,7 @@
                 <div class="navbar-nav flex-grow-1">
                     <a class="nav-item nav-link" href="${pageContext.request.contextPath}/welcome.jsp">Home</a>
                     <a class="nav-item nav-link" href="${pageContext.request.contextPath}/carportpage.jsp">Order Carport</a>
-                    <a class="nav-item nav-link" href="${pageContext.request.contextPath}/">Image wall of our carports</a>
+                    <a class="nav-item nav-link" href="${pageContext.request.contextPath}/imagewall.jsp">Image wall of Carports</a>
                 </div>
 
                 <div class="d-flex align-items-center nav-item--login">
@@ -51,6 +51,13 @@
         </div>
     </nav>
 </header>
+<div class="row col-3">
+<div class="d-flex justify-content-center">
+    <c:if test="${sessionScope.user != null}">
+        <p>${sessionScope.user.username}</p>
+    </c:if>
+</div>
+</div>
 
 <main id="body" class="container flex-grow-1 mt-4" style="min-height: 400px;">
     <h1><jsp:invoke fragment="header"/></h1>

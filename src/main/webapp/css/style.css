@@ -1,6 +1,12 @@
 /* styles.css */
 
 /* Reset some default styles */
+
+/*I know/We know that !important should only be used as last ditch effort -
+However bootstrap's own css overwrote most of the css we made unless we added !important
+We also know it's possible to put our own css below Bootstrap's so that it would overwrite automatically, but
+that scared us a little bit, in case it would mess something up - so we chose not to do that.
+ */
 table {
     border-collapse: collapse;
     border: 1px solid silver;
@@ -29,14 +35,14 @@ header, footer {
 
 .dropdownHeight {
     max-width: 300px ! important;
-    max-height: 140px ! important;
+    max-height: 140px ! important;        /* read the top about the use of !important */
     overflow-y: auto; !important;
 
 }
 .dropdownWidth {
     height: auto;
     max-width: 300px !important;
-    max-height: 140px !important;
+    max-height: 140px !important;   /* read the top about the use of !important */
     overflow-y: auto !important;
     overflow-x: hidden !important;
 
@@ -54,7 +60,7 @@ header, footer {
 
 .dropdownShed {
     max-width: 300px !important;
-    max-height: 140px !important;
+    max-height: 140px !important;   /* read the top about the use of !important */
     overflow-y: auto;
     overflow-x: hidden; !important;
 }
@@ -80,8 +86,7 @@ header, footer {
 .button-container .custom-button {
 
     background-color: #174B87; !important;
-    border-color: #174B87 !important;
-    color: white; !important;
+    border-color: #174B87 !important;  /* read the top about the use of !important */
+    color: white !important;
 
 }
-
