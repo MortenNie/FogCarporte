@@ -1,5 +1,5 @@
 @startuml
-title FogCarporte users navigation diagram
+title FogCarporte navigation diagram
 start
 :Index.jsp;
 
