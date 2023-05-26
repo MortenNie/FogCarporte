@@ -51,14 +51,15 @@
         </div>
     </nav>
 </header>
-<div class="row col-3">
-<div class="d-flex justify-content-center">
+<div class="col 2"></div>
+<div class="flex-row col-6">
+<div class="d-flex justify-content-start">
     <c:if test="${sessionScope.user != null}">
-        <p>${sessionScope.user.username}</p>
+        <p class="text-center text-sm-left text-md-right">${sessionScope.user.username}</p>
     </c:if>
 </div>
 </div>
-
+</div>
 <main id="body" class="container flex-grow-1 mt-4" style="min-height: 400px;">
     <h1><jsp:invoke fragment="header"/></h1>
     <jsp:doBody/>

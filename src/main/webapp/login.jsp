@@ -16,7 +16,7 @@
     <jsp:body>
 
         <h3>You can log in here</h3>
-        <div class="container py-3"> <!-- py = Bootstrap class for spacing -->
+        <div class="container py-3"> <!-- py = Bootstrap class for spacing, or rather padding. py stands for padding-Y(y-axis) so padding for bottom and top. -->
         <div class="row d-flex "> <!-- row & d-flex = Bootstrap classes -->
         <div class="col-xl-5"> <!-- col, col-md(medium), col-lg(large), col-xl(xlarge) = Bootstrap classes & "definers". Uden col-xl-5 ville formene fylde hele skærmen. 1 er mindst, col-1 er mindst, col-12 er størst.-->
         <div class="card shadow" style="border-radius: 2rem;"> <!-- Card = Bootstrap class der er god til at virke som en "login form", Shadow = skygge, rem = size. 1rem = 16px -->
