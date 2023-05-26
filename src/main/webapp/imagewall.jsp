@@ -174,6 +174,61 @@
 
             <div class="col-lg-4 col-md-12 mb-4 mb-lg-4">
                 <img
+                        src="https://www.creativeoutdoors.com.au/wp-content/uploads/2021/02/4-Uplifted-Carport-Flat-V-Dek-1-Roofing-1920x1080.jpg"
+                        class="w-100 h-100 shadow-sm rounded mb-4"
+                        alt="Deep house Carport"
+
+                />
+            </div>
+
+            <div class="col-lg-4 col-md-12 mb-4 mb-lg-4">
+                <img
+                        src="https://assets-global.website-files.com/5fda35d2b735ba65e0a94a33/602f7928056aac2d20e07bb9_Timber%20Carport(1).jpg"
+                        class="w-100 h-100 shadow-sm rounded mb-4"
+                        alt="Triple carport"
+
+                />
+            </div>
+
+            <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                <img
+                        src="https://i.ebayimg.com/images/g/7VoAAOSwU0JjH3RK/s-l1600.jpg"
+                        class="w-100 shadow-sm rounded mb-4"
+                        alt="Hill Carport"
+
+                />
+            </div>
+
+            <div class="col-lg-4 col-md-12 mb-4 mb-lg-4">
+                <img
+                        src="https://www.pioneershade.com.au/wp-content/uploads/2022/08/two-post-canti-carport-w-screen-2.jpg"
+                        class="w-100 h-100 shadow-sm rounded mb-4"
+                        alt="Aesthetically pleasing Carport"
+
+                />
+            </div>
+
+            <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                <img
+                        src="https://www.pioneershade.com.au/wp-content/uploads/2022/02/carport-walkway.jpg"
+                        class="w-100 shadow-sm rounded mb-4"
+                        alt="Wavey extension & walkway carport"
+
+                />
+            </div>
+
+            <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                <img
+                        src="https://www.pioneershade.com.au/wp-content/uploads/2022/05/carport-awning.jpg"
+                        class="w-100 shadow-sm rounded mb-4"
+                        alt="Aesthetic wavey house extension carport"
+
+                />
+            </div>
+
+
+            <div class="col-lg-4 col-md-12 mb-4 mb-lg-4">
+                <img
                         src="https://mrcarports.com.au/wp-content/uploads/2022/09/Carport-Garage-Extension.jpg"
                         class="w-100 h-100 shadow-sm rounded mb-4"
                         alt="Extension of House Carport"
