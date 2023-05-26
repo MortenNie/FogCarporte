@@ -7,12 +7,17 @@ if (Already a user?) then (yes)
   :Login link;
   :login.jsp;
   :Login servlet;
+:Valid Credentials?;
 
 
-  if (Valid Credentials?) then (yes)
+
+
+
+   if(user or admin)then (yes)
    :welcome.jsp;
-   :Ordercarport servlet;
-   :Proceed to Order;
+
+
+
 
   else (no)
     : error.jsp;
@@ -30,15 +35,134 @@ else (no)
   :Login servlet;
    if (Valid Credentials?) then (yes)
   :welcome.jsp;
-  :Ordercarport servlet;
-  :Proceed to Order;
+
+
     else (no)
         : error.jsp;
         :Display Error Message;
         stop
 endif
 endif
+if (welcome.jsp )then (admin only)
+
+    :Her admin can see all orders;
+    :Choose button see all order;
+    :Order history servlet;
+    :orderhistory.jsp ;
+
+    :Here you have options as admin to see order details, to delete order,change order status, give discount and give a custom price;
+
+        if (Order details option)
+        :Here as admin you can choose to see order details;
+            :Choose see order details button;
+            :Orderdetails servlet;
+            :orderdetails.jsp;
+            stop
+
+        else if (Delete order option)
+        :Here as admin you can delete an order;
+        :Choose delete order button;
+        :Deleteorder servlet;
+        :orderhistory.jsp;
+        stop
+
+        else if(Change order status option)
+        :Here as admin you can change the order status from pending to accepted and vise versa;
+        :Choose change order status button;
+        :Updateorderstatus servlet;
+        :orderhistory.jsp;
+        stop
+
+        else if(Discount option)
+        :Here as admin you can give 10% discount as many times you want;
+        :Choose give 10% discount button;
+        :Discounttenpercent servlet;
+        :orderhistory.jsp;
+        stop
+
+        else (Give custom price option);
+        : Custom price option;
+        :Here an admin can insert manually a price;
+        :Givecustompriceoption servlet;
+        :customprice.jsp;
+        :Customprice servlet;
+        :orderhistory.jsp;
+        stop
+
+
+endif
+
+
+
+    else if(admin only)
+    :Add new materials option;
+    :Here admin can add new materials in the database;
+    :Choose Add new materials to DB button;
+    :Addnewmaterials servlet;
+    :addnewmatrials.jsp;
+    :Here an admin can add new materials by inserting: type, name, length and price per meter;
+    :Choose submit after inserting is complete;
+    :Addnewmaterialstwo servlet;
+    :welcome.jsp;
+    stop
+
+
+    else if (admin only)
+    :Delet old materials option;
+    :Here an admin can delete old materials, like rem, stolpe etc;
+    :Delete old materials button;
+    :Deleteoldmaterials servlet;
+    :deleteoldmaterials.jsp;
+    :Here an admin can see all the materials and delete them from the database;
+
+        if(Delete rem)
+        :Choose delete rem button;
+        :Deletrem servlet;
+        :deleteoldmaterials.jsp;
+        stop
+            else if(Delete spaer)
+            :Choose delete spaer button;
+            :Deletspaer servlet;
+            :deleteoldmaterials.jsp;
+            stop
+
+                else if(Delete stolpe)
+                :Choose delete stolpe button;
+                :Deletestolpe servlet;
+                :deleteoldmaterials.jsp;
+                stop
+
+                    else (Delete tag)
+                    :Delete tag ;
+                    :Choose delete tag button;
+                    :Deletetag servlet;
+                    :deleteoldmaterials.jsp;
+                    stop
+
+        endif
+
+
+
+
+else if(users see all your orders)
+:Here you can click on Order history button;
+ :Orderhistory servlet;
+ :orderhistory.jsp;
+ :Here you can see your order if exists and choose to see order details;
+ :Choose See order details button;
+ :Orderdetails servlet;
+ :orderdetails.jsp;
+ stop
+
+   else (user and admin)
+   :Here you can order carport;
+:Ordercarport servlet;
+ :Proceed to Order;
 :carportpage.jsp;
+
+
+
+
 
 if (Carport type?) then (premade)
     :Select pre-made carport image button;
@@ -58,6 +182,7 @@ else (custom)
   :Cinfirmcustomcarport servlet;
   :customcarporttwo.jsp;
   endif
+
   if(Continue to Add to shopping cart?)then
   :Select add to shopping cart button;
 
@@ -95,4 +220,6 @@ else (delete order)
 :shoppingcart.jsp;
 
 stop
+
+
 @enduml
