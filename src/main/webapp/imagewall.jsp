@@ -25,6 +25,7 @@
 
         <p>Welcome to the image wall!
         Here are some pictures to give you inspiration.
+            <br/>
 
             <small>Disclaimer: These carports are not built by us and might not contain our materials. They are purely for inspirational purposes.</small>
         </p>
