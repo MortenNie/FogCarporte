@@ -16,17 +16,19 @@
     <jsp:body>
 
         <h3>You can log in here</h3>
-        <div class="container py-3"> <!-- py = Bootstrap class for spacing, or rather padding. py stands for padding-Y(y-axis) so padding for bottom and top. -->
-        <div class="row d-flex "> <!-- row & d-flex = Bootstrap classes -->
-        <div class="col-xl-5"> <!-- col, col-md(medium), col-lg(large), col-xl(xlarge) = Bootstrap classes & "definers". Uden col-xl-5 ville formene fylde hele skærmen. 1 er mindst, col-1 er mindst, col-12 er størst.-->
+        <div class="container py-3"> <!-- py = py stands for padding-Y(y-axis) so padding for bottom and top. -->
+        <div class="row d-flex"> <!-- row & d-flex = Bootstrap classes -->
+        <div class="col-5"> <!-- col, col-md, col-lg, col-xl = Bootstrap classes & "definers". md, lg, xl er for forskellige skærmstørrelser. Col gælder for alle.  -->
         <div class="card shadow" style="border-radius: 2rem;"> <!-- Card = Bootstrap class der er god til at virke som en "login form", Shadow = skygge, rem = size. 1rem = 16px -->
         <div class="card-body p-5"> <!-- p = padding, dvs mellemrum mellem kanten af Card og hvor teksten/button etc er. dvs. Ingen padding = teksten ville være helt til kanten. -->
-            <strong style="font-size:24px">Login</strong> <!-- Tyk/Fed tekst -->
+            <strong style="font-size:24px">Login</strong> <!-- Strong = Tyk/Fed tekst -->
             <form action="login" method="post">
             <div class="form-group">
                 <label for="username">Username or Email</label>
                 <br/>
-                <input type="text" class="form-control shadow" id="username" name=username placeholder=" Enter username or email">
+                <input type="text" class="form-control shadow"
+                       id="username" name=username
+                       placeholder="Enter username or email">
             </div>
             <br/>
             <div class="form-group">

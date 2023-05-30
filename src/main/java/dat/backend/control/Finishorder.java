@@ -66,10 +66,10 @@ public class Finishorder extends HttpServlet {
             }
 
         }
-
+        request.setAttribute("orderId", orderId);
         shoppingCart.getCarports().clear();
         session.removeAttribute("shoppingcart");
-        request.getRequestDispatcher("welcome.jsp").forward(request, response);
+        request.getRequestDispatcher("WEB-INF/confirmationpage.jsp").forward(request, response);
 
     }
 
